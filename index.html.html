@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinico Medical Communication | Premier Scientific & Medical Publications</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Streamlined publication support, systematic evidence synthesis, and strategic medical communications for Principal Investigators and biopharma worldwide." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Inter Font Family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#1D4F7A',
+              cyan: '#008DDA',
+              slate: '#0F172A',
+              canvas: '#F4F8FB',
+              metric: '#D97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .bg-medical-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(29, 79, 122, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(29, 79, 122, 0.04) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-white text-brand-slate selection:bg-brand-cyan/20 selection:text-brand-blue">
+
+  <!-- A. STICKY NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <svg viewBox="0 0 500 500" class="w-11 h-11 flex-shrink-0 transition-transform duration-300 group-hover:scale-105" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="250" cy="250" r="236" stroke="#1D4F7A" stroke-width="14" />
+          <mask id="nav-logo-mask">
+            <rect width="500" height="500" fill="white" />
+            <circle cx="250" cy="250" r="142" fill="black" />
+            <rect x="227" y="10" width="46" height="120" fill="black" />
+            <rect x="227" y="370" width="46" height="120" fill="black" />
+          </mask>
+          <circle cx="250" cy="250" r="206" fill="#1D4F7A" mask="url(#nav-logo-mask)" />
+          <path d="M 178 340 L 178 158 L 250 290 L 322 158 L 322 340" stroke="#1D4F7A" stroke-width="31" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        </svg>
+
+        <div class="flex flex-col">
+          <span class="text-lg font-bold tracking-tight text-brand-blue group-hover:text-brand-cyan transition-colors leading-tight">
+            Clinico
+          </span>
+          <span class="text-xs font-semibold tracking-wider uppercase text-slate-500">
+            Medical Communication
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+        <a href="#services" class="hover:text-brand-cyan transition-colors">Services</a>
+        <a href="#capabilities" class="hover:text-brand-cyan transition-colors">Capabilities & Expertise</a>
+        <a href="#compliance" class="hover:text-brand-cyan transition-colors">Compliance & Ethics</a>
+        <a href="mailto:info@clinicomedical.com" class="hover:text-brand-cyan transition-colors flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-4 h-4 text-brand-cyan"></i>
+          <span>info@clinicomedical.com</span>
+        </a>
+      </nav>
+
+      <!-- Desktop Header CTA -->
+      <div class="hidden md:block">
+        <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-brand-blue hover:bg-brand-cyan shadow-sm hover:shadow transition-all duration-200">
+          Request Consultation
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-brand-blue focus:outline-none" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg">
+      <a href="#services" class="mobile-link block px-3 py-2 text-base font-medium text-slate-700 hover:bg-brand-canvas hover:text-brand-blue rounded-md">Services</a>
+      <a href="#capabilities" class="mobile-link block px-3 py-2 text-base font-medium text-slate-700 hover:bg-brand-canvas hover:text-brand-blue rounded-md">Capabilities & Expertise</a>
+      <a href="#compliance" class="mobile-link block px-3 py-2 text-base font-medium text-slate-700 hover:bg-brand-canvas hover:text-brand-blue rounded-md">Compliance & Ethics</a>
+      <a href="mailto:info@clinicomedical.com" class="block px-3 py-2 text-base font-medium text-brand-cyan hover:bg-brand-canvas rounded-md">info@clinicomedical.com</a>
+      <div class="pt-2">
+        <a href="#contact" class="mobile-link block w-full text-center px-4 py-2.5 rounded-lg text-sm font-semibold text-white bg-brand-blue hover:bg-brand-cyan transition">
+          Request Consultation
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- B. HERO SECTION -->
+    <section class="relative bg-medical-grid overflow-hidden border-b border-slate-200/60 pt-16 pb-20 lg:pt-24 lg:pb-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-canvas border border-brand-blue/15 text-brand-blue text-xs font-semibold tracking-wide uppercase mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Peer-Review Publishing & Scientific Dissemination
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-blue tracking-tight leading-[1.15]">
+            Streamlined Publication Support & Strategic Medical Communications
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
+            Transform your data into clear, compliant, and publication-ready communications. We combine a streamlined internal writing engine with a global advisory network spanning the US and Europe to support Principal Investigators and the biopharma industry worldwide.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+            <a href="#services" class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg text-base font-semibold text-white bg-brand-blue hover:bg-brand-cyan shadow-sm hover:shadow transition-all duration-200">
+              Explore Our Services
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg text-base font-semibold text-brand-blue bg-white border-2 border-brand-blue hover:bg-brand-canvas hover:border-brand-cyan hover:text-brand-cyan shadow-sm transition-all duration-200">
+              Schedule a Consultation
+            </a>
+          </div>
+          <div class="mt-12 pt-8 border-t border-slate-200/80 flex flex-wrap items-center gap-y-3 gap-x-8 text-xs font-medium text-slate-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-brand-cyan"></i>
+              <span>GPP 2022 Compliant</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan"></i>
+              <span>ICMJE Author Standards</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="globe-2" class="w-4 h-4 text-brand-cyan"></i>
+              <span>US & EU Advisory Network</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C. CORE SERVICES SECTION -->
+    <section id="services" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-16">
+          <div class="text-xs font-bold tracking-wider uppercase text-brand-cyan mb-2">Our Capabilities</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-blue tracking-tight">
+            Our Clinical & Medical Communication Offerings
+          </h2>
+          <p class="mt-4 text-lg text-slate-600">
+            Tailored publication workflows for PIs & academic medical centers, alongside compliant clinical evidence dissemination for pharma & biotech companies.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-brand-canvas rounded-2xl p-8 border border-slate-200/80 hover:border-brand-cyan/50 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
+                <i data-lucide="file-text" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-brand-blue mb-3">
+                Clinical Manuscript & Publication Support
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Collaborative development and professional writing support for peer-reviewed medical journals, managed in strict compliance with GPP 2022.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-200/70">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-3">Key Deliverables</span>
+              <ul class="text-xs text-slate-700 space-y-2">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>Full manuscript preparation (Introduction, Methods, Results, Discussion)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>Structural & stylistic substantive editing</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>Journal-specific formatting & author response development</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-brand-canvas rounded-2xl p-8 border border-slate-200/80 hover:border-brand-cyan/50 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
+                <i data-lucide="layers" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-brand-blue mb-3">
+                Clinical Evidence Synthesis & Literature Reviews
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Rigorous, methodical evaluation and synthesis of clinical trial data to support evidence-based medicine.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-200/70">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-3">Key Deliverables</span>
+              <ul class="text-xs text-slate-700 space-y-2">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>PRISMA-compliant systematic reviews & meta-analyses</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>Therapeutic clinical reports</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>Multi-patient case series & specialized narrative reviews</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-brand-canvas rounded-2xl p-8 border border-slate-200/80 hover:border-brand-cyan/50 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
+                <i data-lucide="presentation" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-brand-blue mb-3">
+                Medical Congress & Symposia Communications
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Translation of complex clinical trial data into high-impact visual and verbal narratives for major medical meetings and scientific congresses.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-200/70">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-3">Key Deliverables</span>
+              <ul class="text-xs text-slate-700 space-y-2">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>Congress abstract submissions & encore adaptations</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>High-visibility print & digital scientific posters</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>Satellite symposium slide decks & speaker notes</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-brand-canvas rounded-2xl p-8 border border-slate-200/80 hover:border-brand-cyan/50 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
+                <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-brand-blue mb-3">
+                Academic Grantsmanship & Educational Materials
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                High-level scientific storytelling and educational content designed to secure research funding and advance medical education for clinical faculty.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-200/70">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-3">Key Deliverables</span>
+              <ul class="text-xs text-slate-700 space-y-2">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>Grant proposal structural refinement (NIH/DOD & foundation focus)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>Continuing Medical Education (CME) module content</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+                  <span>Grand rounds presentations & fellowship lecture series</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D. CAPABILITIES & EXPERTISE -->
+    <section id="capabilities" class="py-20 lg:py-28 bg-brand-canvas border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="text-xs font-bold tracking-wider uppercase text-brand-cyan mb-2">Capabilities & Rigor</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-blue tracking-tight">
+            Our Elite Team Combines Unparalleled Scientific Rigor with Global Strategic Expertise.
+          </h2>
+          <p class="mt-6 text-base sm:text-lg text-slate-700 leading-relaxed">
+            Clinico's core management team, alongside our global advisors, provides a minimum of 10+ years of individual hands-on, peer-reviewed publishing experience. This foundation of proven track records ensures exceptional execution across every client engagement.
+          </p>
+        </div>
+
+        <!-- 6 Metrics -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 mb-20">
+          <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm flex flex-col justify-center items-center text-center">
+            <span class="text-3xl sm:text-4xl font-extrabold text-brand-metric tracking-tight">30+</span>
+            <span class="text-xs font-semibold text-brand-blue mt-2">Peer-Reviewed Papers</span>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">In reputable medical journals</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm flex flex-col justify-center items-center text-center">
+            <span class="text-3xl sm:text-4xl font-extrabold text-brand-metric tracking-tight">90%+</span>
+            <span class="text-xs font-semibold text-brand-blue mt-2">Acceptance Rate</span>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Rigorous curation & high-standard quality</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm flex flex-col justify-center items-center text-center">
+            <span class="text-3xl sm:text-4xl font-extrabold text-brand-metric tracking-tight">25+</span>
+            <span class="text-xs font-semibold text-brand-blue mt-2">Articles Reviewed</span>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Expertise on both reviewer & author sides</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm flex flex-col justify-center items-center text-center">
+            <span class="text-3xl sm:text-4xl font-extrabold text-brand-metric tracking-tight">1.5K+</span>
+            <span class="text-xs font-semibold text-brand-blue mt-2">Team Citations</span>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Achieved over the last 5–10 years</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm flex flex-col justify-center items-center text-center">
+            <span class="text-3xl sm:text-4xl font-extrabold text-brand-metric tracking-tight">100%</span>
+            <span class="text-xs font-semibold text-brand-blue mt-2">Academic Pedigree</span>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">All writers hold PhD or postdoc credentials</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm flex flex-col justify-center items-center text-center">
+            <span class="text-3xl sm:text-4xl font-extrabold text-brand-metric tracking-tight leading-tight">30+ Yrs</span>
+            <span class="text-xs font-semibold text-brand-blue mt-2">Combined Exp.</span>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Deep cumulative industry knowledge</p>
+          </div>
+        </div>
+
+        <!-- Therapeutic Experience -->
+        <div class="bg-white rounded-2xl p-8 lg:p-10 border border-slate-200 shadow-sm mb-16">
+          <div class="max-w-2xl">
+            <h3 class="text-xl font-bold text-brand-blue mb-2">Depth of Therapeutic Experience</h3>
+            <p class="text-slate-600 text-sm">
+              Our advisors bring deep-seated experience in complex drug development and biomarker discovery across multiple critical therapeutic areas.
+            </p>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-2.5" id="therapeutic-badges">
+            <button class="therapeutic-pill active px-4 py-2 rounded-full text-xs font-medium border border-brand-cyan bg-brand-blue text-white transition-all duration-150" data-pill="all">All Specializations</button>
+            <button class="therapeutic-pill px-4 py-2 rounded-full text-xs font-medium border border-slate-200 bg-brand-canvas text-slate-700 hover:border-brand-cyan transition-all duration-150" data-pill="neurology">Neurology</button>
+            <button class="therapeutic-pill px-4 py-2 rounded-full text-xs font-medium border border-slate-200 bg-brand-canvas text-slate-700 hover:border-brand-cyan transition-all duration-150" data-pill="immunology">Immunology</button>
+            <button class="therapeutic-pill px-4 py-2 rounded-full text-xs font-medium border border-slate-200 bg-brand-canvas text-slate-700 hover:border-brand-cyan transition-all duration-150" data-pill="rare">Rare Diseases</button>
+            <button class="therapeutic-pill px-4 py-2 rounded-full text-xs font-medium border border-slate-200 bg-brand-canvas text-slate-700 hover:border-brand-cyan transition-all duration-150" data-pill="gene">Gene Editing</button>
+            <button class="therapeutic-pill px-4 py-2 rounded-full text-xs font-medium border border-slate-200 bg-brand-canvas text-slate-700 hover:border-brand-cyan transition-all duration-150" data-pill="infectious">Infectious Diseases</button>
+            <button class="therapeutic-pill px-4 py-2 rounded-full text-xs font-medium border border-slate-200 bg-brand-canvas text-slate-700 hover:border-brand-cyan transition-all duration-150" data-pill="oncology">Oncology</button>
+            <button class="therapeutic-pill px-4 py-2 rounded-full text-xs font-medium border border-slate-200 bg-brand-canvas text-slate-700 hover:border-brand-cyan transition-all duration-150" data-pill="biomarker">Biomarker Discovery</button>
+          </div>
+
+          <div id="therapeutic-callout" class="mt-4 p-4 rounded-lg bg-brand-canvas text-xs text-slate-600 border border-slate-200/60 transition-all">
+            Showing all therapeutic areas. Our team provides end-to-end scientific accuracy across foundational, clinical trial (Phases I–IV), and post-marketing observational datasets.
+          </div>
+        </div>
+
+        <!-- Compliance Banner -->
+        <div id="compliance" class="bg-gradient-to-r from-brand-blue to-[#133757] rounded-2xl p-8 lg:p-10 text-white shadow-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/10 text-xs font-semibold text-brand-cyan mb-3">
+                <i data-lucide="shield" class="w-3.5 h-3.5"></i> Certified Quality Framework
+              </div>
+              <h3 class="text-2xl font-bold tracking-tight mb-3">Institutional Quality & Publication Integrity</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Our team is officially certified by the Elsevier Researcher Academy in critical domains including Publishing Ethics, Manuscript Architecture, and Peer Review Processes, ensuring 100% guideline compliance across all projects.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-4">
+              <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/15">
+                <div class="w-10 h-10 rounded-lg bg-brand-cyan flex items-center justify-center font-black text-xs text-white">GCP</div>
+                <div>
+                  <h4 class="font-bold text-sm">ICH-GCP Certified</h4>
+                  <p class="text-xs text-slate-300">Good Clinical Practice Standards</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/15">
+                <div class="w-10 h-10 rounded-lg bg-brand-metric flex items-center justify-center font-black text-xs text-white">GPP</div>
+                <div>
+                  <h4 class="font-bold text-sm">GPP 2022 Compliant</h4>
+                  <p class="text-xs text-slate-300">Good Publication Practice Standards</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- E. CONTACT SECTION -->
+    <section id="contact" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="text-xs font-bold tracking-wider uppercase text-brand-cyan mb-2">Initiate Engagement</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-blue tracking-tight">Partner With Clinico</h2>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+            Collaborate directly with our senior scientific leads and global advisory network to accelerate your publication milestones with publication-grade rigor.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-brand-canvas p-8 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-md transition-all">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
+                <i data-lucide="mail" class="w-6 h-6 text-brand-cyan"></i>
+              </div>
+              <h3 class="text-lg font-bold text-brand-blue mb-2">Direct Communications</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Reach our scientific editorial team directly for manuscript reviews, systematic evaluations, or congress planning inquiries.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-200/70">
+              <a href="mailto:info@clinicomedical.com?subject=Consultation%20Inquiry%20-%20Clinico%20Medical%20Communication" class="inline-flex items-center justify-center w-full px-5 py-3 rounded-lg text-sm font-semibold text-white bg-brand-blue hover:bg-brand-cyan shadow-sm transition-all duration-200 gap-2">
+                <span>info@clinicomedical.com</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-brand-canvas p-8 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-md transition-all">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
+                <i data-lucide="clock" class="w-6 h-6 text-brand-cyan"></i>
+              </div>
+              <h3 class="text-lg font-bold text-brand-blue mb-2">Rapid Feasibility Assessment</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Our senior scientific leadership conducts an initial scope and timeline evaluation within 24–48 business hours of receiving your project outline.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-200/70">
+              <span class="inline-flex items-center gap-2 text-xs font-semibold text-brand-blue">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                Standard Turnaround: 24–48 Business Hours
+              </span>
+            </div>
+          </div>
+
+          <div class="bg-brand-canvas p-8 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between hover:border-brand-cyan/50 hover:shadow-md transition-all">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
+                <i data-lucide="lock" class="w-6 h-6 text-brand-cyan"></i>
+              </div>
+              <h3 class="text-lg font-bold text-brand-blue mb-2">Institutional Confidentiality</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                We strictly execute mutual Non-Disclosure Agreements (CDA/NDA) before manuscript drafts, clinical protocols, or trial datasets are shared.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-200/70">
+              <span class="text-xs font-semibold text-slate-500 flex items-center gap-1.5">
+                <i data-lucide="shield-check" class="w-4 h-4 text-brand-blue"></i>
+                Full GPP 2022 & ICMJE Compliance
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- F. FOOTER -->
+  <footer class="bg-brand-slate text-slate-300 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3.5 mb-4">
+            <svg viewBox="0 0 500 500" class="w-10 h-10 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="250" cy="250" r="236" stroke="#008DDA" stroke-width="14" />
+              <mask id="footer-logo-mask">
+                <rect width="500" height="500" fill="white" />
+                <circle cx="250" cy="250" r="142" fill="black" />
+                <rect x="227" y="10" width="46" height="120" fill="black" />
+                <rect x="227" y="370" width="46" height="120" fill="black" />
+              </mask>
+              <circle cx="250" cy="250" r="206" fill="#008DDA" mask="url(#footer-logo-mask)" />
+              <path d="M 178 340 L 178 158 L 250 290 L 322 158 L 322 340" stroke="#008DDA" stroke-width="31" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+            <span class="text-lg font-bold tracking-tight text-white">Clinico Medical Communication</span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed mb-4">
+            Elevating biopharmaceutical and academic dissemination through clinical rigor, high-impact storytelling, and strict publication ethics compliance.
+          </p>
+          <div class="text-xs text-slate-400">
+            <span class="font-medium text-white">Direct Scientific Routing:</span> 
+            <a href="mailto:info@clinicomedical.com" class="text-brand-cyan hover:underline ml-1">info@clinicomedical.com</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-wider mb-4">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#services" class="hover:text-white transition">Core Services</a></li>
+            <li><a href="#capabilities" class="hover:text-white transition">Capabilities & Metrics</a></li>
+            <li><a href="#compliance" class="hover:text-white transition">Compliance Framework</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact & Consultations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-wider mb-4">Scientific Integrity</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li>• Good Publication Practice (GPP 2022)</li>
+            <li>• ICMJE Guidelines for Authorship</li>
+            <li>• PRISMA Reporting Guidelines</li>
+            <li>• Elsevier Certified Peer Reviewers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>
+          &copy; 2026 Clinico Medical Communication. All rights reserved.
+        </div>
+        <div class="text-center md:text-right text-[11px] text-slate-400">
+          Operating in strict alignment with GPP 2022 and ICMJE authorship standards.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    lucide.createIcons();
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    const pills = document.querySelectorAll('.therapeutic-pill');
+    const callout = document.getElementById('therapeutic-callout');
+
+    const descriptions = {
+      all: "Showing all therapeutic areas. Our team provides end-to-end scientific accuracy across foundational, clinical trial (Phases I–IV), and post-marketing observational datasets.",
+      neurology: "Neurology Expertise: Specializing in neurodegenerative diseases (Alzheimer's, ALS, Parkinson's), neuro-immunology, and novel central nervous system (CNS) biomarker modalities.",
+      immunology: "Immunology Expertise: Deep publishing experience in targeted biologics, autoimmune pathways (IL-17, IL-23, JAK inhibitors), and adaptive immune profiling.",
+      rare: "Rare Diseases: High-touch clinical storytelling for orphan indications, natural history study registries, and compassionate access publication records.",
+      gene: "Gene Editing: Cutting-edge coverage of CRISPR/Cas9 systems, AAV vector biodistribution, base editing therapeutics, and regulatory safety narratives.",
+      infectious: "Infectious Diseases: Clinical trial reporting for novel antivirals, vaccine immunogenicity profiles, and global epidemiologic surveillance data.",
+      oncology: "Oncology: Extensive manuscript work across immuno-oncology, ADC platforms, solid tumors, hematology, and combination therapeutic trials.",
+      biomarker: "Biomarker Discovery: Translating high-throughput multi-omics data, circulating tumor DNA (ctDNA), and companion diagnostic validations into peer-reviewed publications."
+    };
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('bg-brand-blue', 'text-white', 'border-brand-cyan');
+          p.classList.add('bg-brand-canvas', 'text-slate-700', 'border-slate-200');
+        });
+        pill.classList.remove('bg-brand-canvas', 'text-slate-700', 'border-slate-200');
+        pill.classList.add('bg-brand-blue', 'text-white', 'border-brand-cyan');
+
+        const category = pill.getAttribute('data-pill');
+        if (descriptions[category]) {
+          callout.textContent = descriptions[category];
+        }
+      });
+    });
+  </script>
+</body>
+</html>
